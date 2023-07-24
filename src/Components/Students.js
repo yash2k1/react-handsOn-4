@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './StudentStyle.css'
+import { Link } from 'react-router-dom'
 
 function Student() {
   const [StudentData]= useState([
@@ -61,11 +62,11 @@ Change:'Edit'
     <table>
       <thead>
         <tr>
-          <th>Name:</th>
-          <th>Age:</th>
-          <th>Course:</th>
-          <th>Batch:</th>
-          <th>Change:</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Course</th>
+          <th>Batch</th>
+          <th>Change</th>
         </tr>
       </thead>
   
@@ -76,7 +77,7 @@ Change:'Edit'
           <td>{data.Age}</td>
           <td>{data.Course}</td>
           <td>{data.Batch}</td>
-          <td>{data.Change}</td>
+          <td><Link to='#'>{data.Change}</Link></td>
           </tr>
         })
       }

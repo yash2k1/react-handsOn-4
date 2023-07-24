@@ -32,7 +32,8 @@ table tr {
    /* margin: auto; */
 
 }
-table tr td {
+table tr td ,
+table thead tr th{
     max-width: 150px;
     width: 20%;
     /* border: 2px solid black; */
@@ -41,16 +42,32 @@ table tr td {
   justify-content: center;
 
 }
+
 table tr{
 border: 1px solid black;
 height: 50px;
 
 }
 
-table tr td:nth-last-child(1){
+table tr td:nth-last-child(n){
     display: flex;
-    /* justify-content:flex-end; */
-    color: rgb(50, 0, 251);
-    text-decoration: underline;
-    cursor: pointer;
+    justify-content:flex-end;
+
+}
+table thead tr th:nth-last-child(n){
+    display: flex;
+    justify-content:flex-end;
+}
+table tr td:nth-child(1),
+table thead tr th:nth-child(1) {
+    
+    max-width: 150px;
+    width: 20%;
+    /* border: 2px solid black; */
+  margin: 1px;
+  display: flex;
+  justify-content: flex-start;
+color: black;
+text-decoration: none;
+cursor: none;
 }
